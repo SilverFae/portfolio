@@ -1,0 +1,49 @@
+.html,body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(144, 169, 226); */
+    background-color:  rgb(100, 103, 168);
+}
+.ContactForm{
+    display: flex;
+    border-radius: 5px;
+    background-color: rgb(199, 201, 238);
+    border-width: 2em;
+    border-style: solid;
+    border-color:  rgb(100, 103, 168);
+    
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    background-size: cover;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.contact-title{
+  font-size: 6em;
+  font-weight: bold;
+  z-index: 2;
+  color: #cabbd6; 
+  text-align: center;
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  text-shadow: 2px 2px 4px #4b022f;
+}
+.contact-container  {
+  position: relative;
+}
