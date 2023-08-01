@@ -1,5 +1,6 @@
 
   .containerFooter {
+    position: relative;
     font-size: 1rem;
     text-align: center;
     margin: 0;
@@ -16,4 +17,16 @@
   .containerFooter p{
     padding-bottom: 0.5em;
 
+  }
+  @media only screen and (max-width: 768px) {
+    .containerFooter {
+      font-size: 0.8rem;
+      height: 2rem;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .containerFooter {
+      font-size: 1.2rem;
+      height: 3rem;
+    }
   }
