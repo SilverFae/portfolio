@@ -1,49 +1,82 @@
-.html,body
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background-color: rgb(144, 169, 226); */
-    background-color:  rgb(100, 103, 168);
+@font-face {
+  font-family: 'Game Font';
+  src: url('../assets/images/fonts/gameFont.ttf');
 }
-.ContactForm{
-    display: flex;
-    border-radius: 5px;
-    background-color: rgb(199, 201, 238);
-    border-width: 2em;
-    border-style: solid;
-    border-color:  rgb(100, 103, 168);
-    
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: #000000;
+
+@font-face {
+  font-family: 'Non Header';
+  src: url('../assets/images/fonts/nonHeader.ttf');
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 30vh;
-    background-size: cover;
-    padding-top: 2em;
-    padding-bottom: 2em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.contact-title{
+
+/* Rest of your CSS rules */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.286);
+  font-family: Game Font;
+}
+
+body,
+html {
+  background: url('../assets/images/background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+
+  align-items: center;
+  min-height: 100vh;
+}
+/* Contact Form */
+.contactForm {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.709);
+  border: 2px solid #78b3e0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #78b3e0;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+/* Rest of your CSS for Contact Container, Title, etc. */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+  background-size: cover;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.contact-title {
   font-size: 6em;
   font-weight: bold;
   z-index: 2;
-  color: #cabbd6; 
+  color: #cabbd6;
   text-align: center;
-  position: absolute; 
-  top: 30%; 
-  left: 50%; 
+  position: absolute;
+  top: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: serif;
   text-shadow: 2px 2px 4px #4b022f;
 }
-.contact-container  {
+
+.contact-container {
   position: relative;
 }

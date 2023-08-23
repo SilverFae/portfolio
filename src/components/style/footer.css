@@ -1,32 +1,19 @@
+.containerFooter {
+  margin-bottom: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.709);
+  font-family: 'Non Header', sans-serif;
+  height:75px;
+  text-align: center;
+  width: 100%;
+  padding: 0.5em 0.5em;
+}
 
-  .containerFooter {
-    position: relative;
-    font-size: 1rem;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(84, 87, 138);
-    color: #d3d0d5;
-    text-shadow: 2px 2px 4px #4b022f98;
-    font-family: serif;
-    font-weight: bold;
-    width: 100%;
-    bottom: 0;
-    height: 2.5rem;
-  }
-  .containerFooter p{
-    padding-bottom: 0.5em;
-
-  }
-  @media only screen and (max-width: 768px) {
-    .containerFooter {
-      font-size: 0.8rem;
-      height: 2rem;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    .containerFooter {
-      font-size: 1.2rem;
-      height: 3rem;
-    }
-  }
+.containerFooter p {
+  color: #f1ad23;
+  font-size: 20px;
+  padding-top: 0.5em;
+  font-weight: bold;
+  text-align: center; /* Center align the text */
+  padding-bottom: 0.5em;
+}

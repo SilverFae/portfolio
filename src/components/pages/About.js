@@ -1,13 +1,12 @@
 import React from 'react';
-import prof from '../assets/images/UnlinedHospitableAgama-size_restricted.gif';
-import back from '../assets/images/aboutmeBackground.jpg';
+import prof from '../assets/images/prof.jpeg';
+import back from '../assets/images/background.png';
 import './about.css';
 
 export default function About() {
   return (
     <div>
       <div className="about-header">
-      <h1 className="about-title">About Me</h1>
         <img src={back} alt="not available" className="back" />
         
       </div>

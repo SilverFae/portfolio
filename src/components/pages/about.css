@@ -1,58 +1,96 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background-color: rgb(144, 169, 226); */
-    background-color:  rgb(100, 103, 168);
-    
+/* Global Styles */
+@font-face {
+  font-family: 'Game Font';
+  src: url('../assets/images/fonts/gameFont.ttf');
 }
+
+@font-face {
+  font-family: 'Non Header';
+  src: url('../assets/images/fonts/nonHeader.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  background: url('../assets/images/background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Page Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .about-container {
-  background-color: rgb(100, 103, 168);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 30vh;
+  min-height: 80vh;
   background-size: cover;
-}
-.about-container img {
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  margin-top: -10em;
+  position: relative;
+  margin: 0 auto;
   z-index: 1;
+  padding: 2em;
+  border: 2px solid #f1ad23;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.6);
+  max-width: 800px;
+  width: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border-radius: 10px;
 }
-.back{
-    height:25em;
-    width:100%;
-    border-width: 1em;
-    border-style: solid;
-    border-color: rgb(144, 169, 226) ;
-
-}                                             
-.about-header  {
+.about-header {
+  background-size: cover;
+  height: 50px; /* Adjust the height to your preference */
   position: relative;
 }
-.about-title{
-    font-size: 6em;
-  font-weight: bold;
+
+
+.about-container img {
+  /* Existing styles */
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -6em;
   z-index: 2;
-  color: #cabbd6; 
-  text-align: center;
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-transform: translate(-50%, -50%);
-  font-family: serif;
-  text-shadow: 2px 2px 4px #4b022f;
+  border: 3px solid #f1ad23;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.6);
+  object-fit: cover;
+  position: absolute; /* Change to absolute positioning */
+  top: -10px; /* Adjust to overlay the image on the top line */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  z-index: 2;
 }
 
-.about-text P{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(184, 195, 220);
-    text-align: center;
-    font-family: serif;
-    top: 80%;
-    margin: 2em;
+
+.about-text p {
+  font-size: 18px;
+  color: #f1ad23;
+  text-align: center;
+  font-family: 'Non Header', sans-serif;
+  font-weight: bold;
+  margin-top: 1em;
+  width: 80%;
+  margin: 1em auto;
+}
+
+/* Additional Styles */
+.back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }

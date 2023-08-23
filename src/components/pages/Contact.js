@@ -8,7 +8,7 @@ const Contact = () => {
     <div className = 'contact-container'> 
     <img src={back} alt="not available" className="back" />
     <h1 className="contact-title">Contact Me</h1>
-    <div className='ContactForm'>
+    <div className='contactForm'>
 
         <div className='container'>
           <div className='row'>
