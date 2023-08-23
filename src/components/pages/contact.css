@@ -109,5 +109,33 @@ body {
 
 
 
+/* Add a media query for phone-sized screens */
+@media (max-width: 480px) {
+  .contactForm {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    padding: 1em; /* Adjust padding for better spacing on smaller screens */
+    margin-top: 3em; /* Adjust top margin */
+    margin-bottom: 3em; /* Adjust bottom margin */
+  }
 
-/* Additional styling for your other elements */
+  .form-control {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .submit-btn {
+    font-size: 1rem; /* Adjust font size for button on smaller screens */
+    padding: 0.2em 0.6em; /* Adjust padding for button on smaller screens */
+  }
+
+  .container {
+    padding-top: 1em; /* Adjust top padding for smaller screens */
+    padding-bottom: 1em; /* Adjust bottom padding for smaller screens */
+  }
+
+  .contact-title {
+    font-size: 4rem; /* Adjust font size for title on smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    margin-top: 0.5em; /* Adjust top margin for title on smaller screens */
+  }
+}
+
