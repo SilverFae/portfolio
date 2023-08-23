@@ -1,9 +1,16 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(100, 103, 168);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.286);
+  font-family: 'Game Font', sans-serif;
+  background: url('../assets/images/background.png') no-repeat center center fixed;
+  background-size: cover;
+  align-items: center;
+}
   
   .project-container {
     position: relative;

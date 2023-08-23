@@ -1,9 +1,10 @@
+/* Default styling for footer */
 .containerFooter {
   margin-bottom: 0;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.709);
   font-family: 'Non Header', sans-serif;
-  height:75px;
+  height: 75px;
   text-align: center;
   width: 100%;
   padding: 0.5em 0.5em;
@@ -16,4 +17,26 @@
   font-weight: bold;
   text-align: center; /* Center align the text */
   padding-bottom: 0.5em;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .containerFooter {
+    height: 50px; /* Adjust height for smaller screens */
+  }
+
+  .containerFooter p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+  .containerFooter {
+    height: 100px; /* Adjust height for larger screens */
+  }
+
+  .containerFooter p {
+    font-size: 24px; /* Adjust font size for larger screens */
+  }
 }

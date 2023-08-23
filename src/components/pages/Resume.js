@@ -1,5 +1,4 @@
 import React from 'react';
-import back from '../assets/images/aboutmeBackground.jpg';
 import './resume.css';
 
 const Resume = () => {
@@ -16,7 +15,6 @@ const Resume = () => {
 
   return (
     <div className="resume-container">
-      <img src={back} alt="not available" className="back" />
       <div className='resumeHeader'>
         <h1>Resume</h1>
         <button className='resumeBtn' onClick={handleDownload}>
@@ -67,6 +65,18 @@ const Resume = () => {
             </tr>
             <tr>
               <td>jQuery</td>
+            </tr>
+            <tr>
+              <td>Bootstrap</td>
+            </tr>
+            <tr>
+              <td>Materialize</td>
+            </tr>
+            <tr>
+              <td>Git</td>
+            </tr>
+            <tr>
+              <td>Apollo</td>
             </tr>
           </tbody>
         </table>

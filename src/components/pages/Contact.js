@@ -1,72 +1,115 @@
-import React from 'react';
-import './contact.css'; // Import the CSS file
-
-import back from '../assets/images/aboutmeBackground.jpg';
+import React, { useState } from 'react';
+import './contact.css';
 
 const Contact = () => {
-  return (
-    <div className = 'contact-container'> 
-    <img src={back} alt="not available" className="back" />
-    <h1 className="contact-title">Contact Me</h1>
-    <div className='contactForm'>
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-        <div className='container'>
-          <div className='row'>
-            <div className='col-12 text-center'>
-              <div className='contactForm'>
-                <form id='contact-form' noValidate>
-                  {/* Row 1 of form */}
-                  <div className='row formRow'>
-                    <div className='col-6'>
-                      <input
-                        type='text'
-                        name='name'
-                        className='form-control formInput'
-                        placeholder='Name'
-                      ></input>
-                    </div>
-                    <div className='col-6'>
-                      <input
-                        type='email'
-                        name='email'
-                        className='form-control formInput'
-                        placeholder='Email address'
-                      ></input>
-                    </div>
-                  </div>
-                  {/* Row 2 of form */}
-                  <div className='row formRow'>
-                    <div className='col'>
-                      <input
-                        type='text'
-                        name='subject'
-                        className='form-control formInput'
-                        placeholder='Subject'
-                      ></input>
-                    </div>
-                  </div>
-                  {/* Row 3 of form */}
-                  <div className='row formRow'>
-                    <div className='col'>
-                      <textarea
-                        rows={3}
-                        name='message'
-                        className='form-control formInput'
-                        placeholder='Message'
-                      ></textarea>
-                    </div>
-                  </div>
-                  <button className='submit-btn' type='submit'>
-                    Submit
-                  </button>
-                </form>
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitMessage('Form submitted successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitMessage('Error submitting form');
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitMessage('Error submitting form');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  return (
+    <body class="contactBody">
+      <div className='contact-container'>
+        <h1 className='contact-title'>Contact Me</h1>
+        </div>
+        <div className='contactForm'>
+          <form id='contact-form' onSubmit={handleSubmit} noValidate>
+            <div className='row formRow'>
+              <div className='col-6'>
+                <input
+                  type='text'
+                  name='name'
+                  className='form-control formInput'
+                  placeholder='Name'
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className='col-6'>
+                <input
+                  type='email'
+                  name='email'
+                  className='form-control formInput'
+                  placeholder='Email address'
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
             </div>
-          </div>
+            <div className='row formRow'>
+              <div className='col'>
+                <input
+                  type='text'
+                  name='subject'
+                  className='form-control formInput'
+                  placeholder='Subject'
+                  value={formData.subject}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className='row formRow'>
+              <div className='col'>
+                <textarea
+                  rows={3}
+                  name='message'
+                  className='form-control formInput textarea' /* Add the 'textarea' class */
+                  placeholder='Message'
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <button className='submit-btn' type='submit'>
+              Submit
+            </button>
+          </form>
+          {submitMessage && <p className='submit-message'>{submitMessage}</p>}
         </div>
-      </div>
-        </div>
-    );
-  };
-  
-  export default Contact;
+    
+    </body>
+  );
+};
+
+export default Contact;
