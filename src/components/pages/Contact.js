@@ -15,14 +15,14 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://webdev-portfolio-816a16b060ef.herokuapp.com//send-email', {
+      const response = await fetch('https://webdev-portfolio-816a16b060ef.herokuapp.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
-
+    
       if (response.ok) {
         setSubmitMessage('Form submitted successfully!');
         setFormData({
@@ -39,6 +39,7 @@ const Contact = () => {
       setSubmitMessage('Error submitting form');
     }
   };
+    
 
   const handleChange = (e) => {
     const { name, value } = e.target;
