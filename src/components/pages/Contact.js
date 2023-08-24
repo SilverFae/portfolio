@@ -15,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://webdev-portfolio-816a16b060ef.herokuapp.com//send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
