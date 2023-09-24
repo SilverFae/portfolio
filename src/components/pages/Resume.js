@@ -4,7 +4,7 @@ import './resume.css';
 const Resume = () => {
   const handleDownload = () => {
   const resumeFileName = 'upRes.pdf';
-    const resumePath = process.env.PUBLIC_URL + '/assets/images/' + resumeFileName;
+    const resumePath = process.env.PUBLIC_URL + '/assets' + resumeFileName;
 
     const link = document.createElement('a');
     link.href = resumePath;
