@@ -3,14 +3,25 @@ import './resume.css';
 
 const Resume = () => {
   const handleDownload = () => {
-    // Replace 'resume.pdf' with the actual path to your resume file
-    const resumePath = '../assets/images/upRes.pdf';
+  const resumeFileName = 'upRes.pdf';
+    const resumePath = process.env.PUBLIC_URL + '/assets/images/' + resumeFileName;
+
     const link = document.createElement('a');
     link.href = resumePath;
-    link.download = 'your-resume.pdf'; // Set the desired file name for the downloaded file
+    link.download = resumeFileName; // Set the desired file name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    // Check if the download was successful
+    setTimeout(() => {
+      const isDownloaded = document.body.contains(link);
+      if (!isDownloaded) {
+        console.log('Resume download successful.');
+      } else {
+        console.error('Resume download failed.');
+      }
+    }, 1000); // Delay the check for 1 second to allow time for the download
   };
 
   return (

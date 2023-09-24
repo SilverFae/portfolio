@@ -14,14 +14,12 @@ export default function About() {
         <img src={prof} alt="Shannon Hogeboom" className="prof" />
         <div className="about-text">
           <p>
-            Greetings! I am an aspiring frontend developer with a strong desire to venture into the captivating world of game development!
-            My passion for learning and creating knows no bounds, and I am thrilled to merge my artistic background and design skills with my technical expertise.
-
-            Currently, I am engrossed in a personal project, which I am eagerly anticipating releasing in the near future. Moreover, I am proud to share that I successfully completed the full-stack coding bootcamp at Arizona State University,
-            a transformative experience that has equipped me with valuable coding knowledge and the ability to collaborate effectively with others.
-
-            As I journey forward, my unwavering commitment is to continue my growth as a developer, embracing new challenges and continuously expanding my skill set. Exciting times lie ahead, and I can't wait to explore the endless
-            possibilities this thrilling field has to offer!
+          I am an upcoming Full Stack Developer with a strong passion for crafting innovative digital solutions. Recently, I achieved a significant milestone 
+          in my career by obtaining my Full Stack Development certification from Arizona State University (ASU). This intensive program equipped me with a diverse 
+          skill set encompassing both front-end and back-end technologies, enabling me to create seamless and user-friendly web applications. With a keen eye for
+          detail and a commitment to staying at the forefront of technology trends, I am dedicated to delivering top-notch software solutions that empower businesses
+          and delight users. I am excited to embark on this rewarding journey, harnessing my newfound knowledge and skills to contribute meaningfully to the world 
+          of web development.
           </p>
         </div>
       </div>
